@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>#spotifybot</title>
+
+  <link rel="stylesheet" href="/css/reset.min.css" />
+  <link rel="stylesheet" href="https://sp-bootstrap.global.ssl.fastly.net/8.0.0/sp-bootstrap.min.css" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />  
+<!--   <link rel="stylesheet" href="/css/Player.css" /> -->
+  <link rel="stylesheet" href="/css/loading.css" />
+  <link rel="stylesheet" href="/css/Style.css" />
+    <link rel="stylesheet" href="/css/image.css" />
+  
+
+</head>
+<body>
+  
+  <header class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+    <div class="header-section">
+      <h1>#spotifybot</h1>
+      <h5>
+        Tag the soundtrack for your picture!
+      </h5>
+    </div>
+    </div>
+  </header>
+  
+  <main id="screen" class="container-fluid container-player">
+    <div class="screen screen-loading">
+      <div class="icon grid-loading-icon">
+<!--         <span class="visually-hidden">Loading</span> -->
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <div id="playback">
+    
+  </div>
+
+  <footer>
+    <p>Spotify devX 2017 - Group X!</p>
+  </footer>
+  
+<!--  Lib  -->
+  <script src="src/tinyemitter.js"></script>
+
+  <!-- React -->
+  <script src="https://fb.me/react-15.0.0.js"></script>
+  <script src="https://fb.me/react-dom-15.0.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+  <!-- TASK: Include the Spotify Web Playback SDK -->
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  
+  <!--  Firebase  -->
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCvro-9BebFBY77PSzOqLE4vB77tvjE31s",
+      authDomain: "musichash-23169.firebaseapp.com",
+      databaseURL: "https://musichash-23169.firebaseio.com",
+      projectId: "musichash-23169",
+      storageBucket: "musichash-23169.appspot.com",
+      messagingSenderId: "63730482681"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <!-- Our Demo -->
+  <script src="src/Demo.Initialization.js"></script>
+  <script src="src/Demo.WebPlaybackSDK.js"></script>
+  <script src="src/Demo.Auth.js"></script>
+  <script src="src/Search.js" type="text/babel"></script>
+  <script src="src/App.js" type="text/babel"></script>
+  <script src="src/Result.js" type="text/babel"></script>
+  <script src="src/upload-image.js" type="text/babel"></script>
+  <script src="src/PostList.js" type="text/babel"></script>
+  <script src="src/Loading.js" type="text/babel"></script>
+  <script src="src/Playback.js" type="text/babel"></script>
+  <script src="src/bootstrap.js" type="text/babel"></script>
+</body>
+</html>
